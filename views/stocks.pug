@@ -1,0 +1,9 @@
+extends layout
+
+block content
+	h2 
+	p main interface for viewing stock charts
+		form(action="/stocks/add", method="post")
+			button(type="submit") Add Stock
+		form(action="/stocks/:stock/remove", method="post")
+			button(type="submit") Delete

@@ -1,0 +1,36 @@
+{
+  "name": "stocks",
+  "version": "1.0.0",
+  "description": "FreeCodeCamp Stock Market Chart",
+  "main": "app.js",
+  "engines": {
+    "node": "4.2.6"
+  },
+  "scripts": {
+    "start": "node app.js production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/starkraving/search-for-stock.git"
+  },
+  "author": "Mike Ritchie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/starkraving/search-for-stock/issues"
+  },
+  "homepage": "https://github.com/starkraving/search-for-stock#readme",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "body-parser": "^1.15.2",
+    "dotenv": "^2.0.0",
+    "express": "^4.14.0",
+    "mongodb": "^2.2.10",
+    "mongoose": "^4.6.1",
+    "pug": "^2.0.0-beta6"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-develop-server": "^0.5.2",
+    "nodebuilder": "^0.9.2"
+  }
+}
