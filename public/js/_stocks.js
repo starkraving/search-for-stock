@@ -34,7 +34,7 @@ $(function(){
 			replacementHTML += '<li>'
 					+'<form action="/stocks/"'+stock.symbol+'"/remove" method="post" data-symbol="'+stock.symbol.toUpperCase()+'">'
 						+'<span>'+stock.symbol.toUpperCase()+'</span>'
-						+'<button type="submit">Delete</button></form></li>'
+						+'<button type="submit">X</button></form></li>'
 		}
 		$('#stocks').empty().append(replacementHTML);
 		resetStocks();
