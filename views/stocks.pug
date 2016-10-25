@@ -1,9 +1,22 @@
 extends layout
 
 block content
-	h2 
-	p main interface for viewing stock charts
-		form(action="/stocks/add", method="post")
+	div#container
+		h2 Group Watched Stocks
+		div#highstocks(style="height: 400px;")
+		ul#stocks
+			each stock in stockSymbols
+				li
+					form(action="/stocks/"+stock.symbol+"/remove", method="post", data-symbol=stock.symbol.toUpperCase())
+						span= stock.symbol.toUpperCase()
+						button(type="submit") X
+
+		form(id="frmAdd", action="/stocks/add", method="post")
+			input(type="text", name="stock", id="stock", required="true")
 			button(type="submit") Add Stock
-		form(action="/stocks/:stock/remove", method="post")
-			button(type="submit") Delete
+
+	script(type="text/javascript", src="/libs/jquery/dist/jquery.min.js")
+	script(type="text/javascript", src="/socket.io/socket.io.js")
+	script(type="text/javascript", src="https://code.highcharts.com/stock/highstock.js")
+	script(type="text/javascript", src="https://code.highcharts.com/stock/modules/exporting.js")
+	script(type="text/javascript", src="/public/js/_stocks.js")
